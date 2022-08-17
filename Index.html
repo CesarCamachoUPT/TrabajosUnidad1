@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="diseño.css"></link>
+</head>
+<body>
+    <h1 class=titulo>Juego Piedra, Papel y Tijera</h1>
+    <div align="center"> 
+    <div  class="fondo"></div>
+    </div>
+    <h1 class="subTitulo">¿Cual Escojes?Piensa Estrategicamente!!!!</h1>
+    <div  class="opc" >
+    <button class="piedra" id="puño"></button>
+    <button class="papel" id="hoja"></button>
+    <button class="tijera" id="tijera"></button>
+</div>
+</div>
+</body>
+<script>
+    
+    const piedra = document.getElementById("puño");
+    const papel = document.getElementById("hoja");
+    const tijera = document.getElementById("tijera");
+    
+    function aleatorio(){
+        const cualquiera = ["puño","hoja","tijera"];
+        const random = Math.floor(Math.random() * 3);
+        const movimiento = cualquiera[random];
+       return movimiento;
+    }
+
+
+    function game(opc){
+        const pc = aleatorio();
+        const usuario = opc;
+        alert(pc);
+        switch (usuario+pc) {
+            case "puñotijera":
+            case "hojapuño":
+            case "tijerahoja":
+                alert("Felicidades --GANO-- el Juego");        
+                break;
+            case "puñohoja":
+            case "hojatijera":
+            case "tijerapuño":
+                alert("Lo lamento --PERDIO--");        
+                break;
+            case "puñopuño":
+            case "hojahoja":
+            case "tijeratijera":
+                alert("Se --EMPATO-- el Juego");        
+                break;    
+        }
+    
+    }
+    function main(){
+        piedra.addEventListener("click" , () => game("puño"));
+        papel.addEventListener("click" , () => game("hoja"));
+        tijera.addEventListener("click" , () => game("tijera"));
+
+    }
+    main();
+
+    
+</script>
+</html>

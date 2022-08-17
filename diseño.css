@@ -1,0 +1,69 @@
+.titulo{
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(252, 251, 253);
+    size: "30";
+    
+}
+.subTitulo{
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(250, 250, 250);
+    size: "25";
+}
+body{
+    background-image: url("./img/fondo.gif");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.fondo{
+    background-image: url("./img/fondo2.jpg");
+    background-position:inherit;
+    width: 500px; 
+    height: 300px; 
+    border: 10px solid black;
+    border-radius: 10px;
+}
+.opc{
+    text-align: center;
+    margin: 50px 0;
+}
+.piedra{
+    background-image:url("./img/piedra.gif")  ;
+    background-position: center;
+    width: 180px;
+    height: 180px;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.piedra:hover{
+    padding: 300px 300px;
+}
+.papel{
+    background-image:url("./img/papel.jpg")  ;
+    background-position: center;
+    width:180px ;
+    height:180px ;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.papel:hover{
+    padding: 300px 300px;
+}
+.tijera{
+    background-image:url("./img/tijera.gif")  ;
+    background-position: center;
+    width:180px ;
+    height:180px ;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tijera:hover{
+    padding: 300px 300px;
+}
