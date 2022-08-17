@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Para esconder la Piedra
+        var min = 1
+        var max = 3
+        var piedraAleatoria = Math.floor(Math.random() * max - min + 1) + min
+        var oportunidades = 0
+        var num 
+        var opc
+        var si 
+
+       console.log("Bienvenido")
+       console.log("Este es el juego Buscando la Piedra")
+
+       //Contador para las Oportunidades del Usuario
+       
+       for(oportunidades; oportunidades < 2; oportunidades++){
+        
+        let nombre = String(prompt("Ingresa tu Nombre:"))
+        console.log("Ingresa la Pocision donde crees que este la Piedra")
+        num = parseInt(prompt(nombre + "," + "Tiene qiue ser entre " + min + " " + "Y" + " " + max))
+       
+        //Validar la Posicion Ingresada
+                if(num >=min && num<=max ){
+                    if(num < piedraAleatoria){
+                        console.log("Estuviste Serca")
+                    }else if(num > piedraAleatoria){
+                        console.log("Casi la Encuentras")
+                    }else if(num == piedraAleatoria){
+                        break;
+                    } 
+
+            } else {//No Ingreso una pocision Valida
+                console.log("Debes Ingresar una Posicion Valida")
+            }    
+    }
+    //Validar si encontro la Piedra
+    
+    if(num == piedraAleatoria){
+        console.log("Felicidades Encontraste la Piedra")
+
+       }else{//El contador de Intentos se Termino
+           
+        console.log("Lo lamento se Terminaron tus Intentos")
+      
+       }    
+    
+
+       
+       
+
+         
+     
+
+    </script>      
+</body>
+</html>
