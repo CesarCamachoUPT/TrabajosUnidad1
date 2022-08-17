@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitacion  </title>
+</head>
+<body>
+    <style>
+        body{
+            background-image:url("cumpleaños.jpg") ;
+            background-size:100% 160% ; 
+        }
+    </style>
+    <div style="text-align: center; margin-top: 50px;">
+        <font face="impact" color="black" size="20" >Mi Fiesta de Cumpleaños</font> 
+        <!-- estilos para los rectangulos-->
+        <div style="text-align: center; margin-top: 15%;">
+            <button id="boton-aceptar" style="background-color:#2700d4f8; color: rgb(7, 1, 1); border-radius: 10px; padding: 40px;">¡¡Quiero Ir!!</button>
+            <button id="boton-cancelar" style="background-color: #006dd4; color: rgb(7, 1, 1); border-radius: 10px; padding: 40px;">¡¡No Podre Asistir:(!!</button>
+        </div>    
+    </body>
+    <script>
+    
+        var contador = 0;
+        var botonAceptar = document.getElementById('boton-aceptar');
+        var botonCancelar = document.getElementById('boton-cancelar');
+        //  click del botón aceptar
+        botonAceptar.addEventListener('click', function() {
+            // Redireccionamos a la página de confirmación
+            aceptar();
+        });
+        // mover el botón cancelar al poner el mouse encima
+        botonCancelar.addEventListener('mouseover', function() {
+            // Redireccionamos a la página de confirmación
+            cancelar();
+        });
+    
+        /*
+        * Mandar alerta
+        */
+        function aceptar() {
+            let nom = "";
+             nom=prompt("Ingresa tu Nombre para Registrarte:");
+            if(nom == ""){ 
+                alert("Necesito tu Nombre para Contemplarte")
+        
+            }else{
+            alert(nom + "  Mi Fiesta sera el 19/06/22");
+            alert("A las 5pm en Tulpeclac");
+            alert(" Te espero en mi Casa.....No Faltes!!!"); 
+        }
+    }
+    
+        /*
+        * Mover el botón cancelar a cualquier lugar de la página
+        */
+        function cancelar() {
+            // -- Resolución de la pantalla
+            let x = window.innerWidth - botonCancelar.offsetWidth;
+            let y = window.innerHeight - botonCancelar.offsetHeight;
+            // -- número aleatorio entre 0 y la resolución de la pantalla   
+            let aleatorioX = Math.floor(Math.random() * x);
+            let aleatorioY = Math.floor(Math.random() * y);
+    
+            botonCancelar.style.position = 'absolute';
+            botonCancelar.style.top = aleatorioY + 'px';
+            botonCancelar.style.left = aleatorioX + 'px';
+            // -- llamar a función de alerta
+            mostrarAlerta();
+        }
+        /*
+        * Mandar alerta
+        */
+        function mostrarAlerta() {
+            contador++;
+            if(contador == 4) {
+                alert("No Insistas!!! , Tienes que ir SI o SI");
+                alert("No Acepto un No Por Respuesta :(");
+                contador++;
+            }     
+        }
+    </script>
+    </html> 
+</body>
+</html>
